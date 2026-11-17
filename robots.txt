@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ihpark93-byte.github.io/kukje-taekwondo/sitemap.xml
