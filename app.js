@@ -118,8 +118,7 @@ function sampleData() {
   const notices = [
     { id: 'N501', title: '12월 국기원 승품·단 심사 안내', body: '2026년도 12월 국기원 승품·단 심사(천안지역, 제13차)가 아래와 같이 진행됩니다.\n\n· 심사 일시: 2026-12-05(토) 10:00~\n· 접수 기간: 2026-11-20(금) ~ 11-27(금)\n· 심의 종목: 1품~3품, 1단~3단\n· 장소: 접수 완료 후 공지\n\n접수를 희망하는 수련생은 접수 기간 내 사무실로 신청해 주세요. 도장 자체 모의 심사는 11월 말에 진행합니다.', date: '2026-11-17', tag: '심사' },
     { id: 'N502', title: '제44회 충청남도지사기 태권도대회 참가 안내', body: '제44회 충청남도지사기 태권도대회가 11/20~23 서산 시민체육관에서 열립니다(개회식 11/21 11:00).\n참가를 원하는 선수·시범단 수련생은 사범님에게 이번 주까지 알려주세요.', date: '2026-11-15', tag: '행사' },
-    { id: 'N503', title: '11월 도장 자체 승급 심사 결과', body: '11/28(토) 도장 자체 승급 심사 결과는 심사 익주 개인 알림톡으로 안내됩니다.\n승급 상품은 사무실에서 수령 가능합니다.', date: '2026-11-12', tag: '안내' },
-    { id: 'N504', title: '추석 연휴 휴무 안내(지난 공지)', body: '연휴 동안 수업이 없습니다. 보강 수업은 사범님과 일정 조율 후 받으실 수 있습니다.', date: '2026-09-28', tag: '휴무' }
+    { id: 'N505', title: '0원 무료체험 신청 오픈', body: '국제태권도장 무료체험을 0원으로 신청하실 수 있습니다.\n\n· 체험 대상: 유아부·초등부·중고등·성인부·선수·시범단(카도스)\n· 신청 방법: 네이버 0원 예약 / 카카오톡 1:1 상담 / 네이버 톡톡 / 전화 041-563-4068\n· 체험은 1회 무료이며, 수업 30분 전에 오시면 도장 둘러보기와 상담까지 함께 진행합니다.', date: '2026-11-17', tag: '무료체험' }
   ];
 
   const schedule = [
@@ -165,6 +164,12 @@ function normalize(d) {
   ['students', 'payments', 'inquiries', 'exams', 'notices', 'schedule'].forEach((k) => { if (!Array.isArray(d[k])) out[k] = base[k]; });
   if (!d.attendance || typeof d.attendance !== 'object') out.attendance = base.attendance;
   out.counters = { ...base.counters, ...(d.counters || {}) };
+  // 2026-11-17: 지난·모순 샘플 공지(추석 휴무, 11월 자체 승급 심사 결과) 정리
+  out.notices = out.notices.filter((n) => n && n.id !== 'N503' && n.id !== 'N504');
+  if (!out.notices.some((n) => /무료체험/.test(n.title || ''))) {
+    const ft = base.notices.find((n) => n.id === 'N505');
+    if (ft) out.notices.unshift(ft);
+  }
   if (typeof out.pin !== 'string' || !/^\d{4}$/.test(out.pin)) out.pin = DEFAULT_PIN;
   return out;
 }
@@ -207,7 +212,6 @@ function renderPublicData() {
     if (a && a.getAttribute('href') && a.getAttribute('href').startsWith('tel:')) a.href = 'tel:' + s.phone.replace(/[^0-9]/g, '');
   });
   $$('[data-academy-hours]').forEach((el) => { el.textContent = s.hours; });
-  $$('[data-academy-fee]').forEach((el) => { el.textContent = '월 ' + fmtWon(s.fee); });
 
   // time select
   const sel = $('#applyTime');
@@ -254,42 +258,6 @@ function renderNotices() {
     : '<div class="empty-state"><span class="empty-ico">📣</span>등록된 공지가 아직 없습니다.</div>';
   const btn = $('#moreNoticesBtn');
   if (btn) btn.textContent = showAll ? '공지 접기' : '공지 더보기';
-}
-
-/* ---------------- 신청 폼 ---------------- */
-function bindApplyForm() {
-  const form = $('#applyForm');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const fd = new FormData(form);
-    const q = {
-      id: nextId('Q'),
-      date: todayStr(),
-      name: (fd.get('name') || '').trim(),
-      phone: (fd.get('phone') || '').trim(),
-      childName: (fd.get('childName') || '').trim(),
-      childAge: (fd.get('childAge') || '').trim(),
-      part: fd.get('part') || '',
-      time: fd.get('time') || '',
-      memo: (fd.get('memo') || '').trim(),
-      status: '대기',
-      replyNote: '',
-      source: '홈페이지'
-    };
-    if (!q.name || !q.phone) { toast('보호자명과 연락처를 입력해 주세요.'); return; }
-    if (!fd.get('agree')) { toast('개인정보 수집에 동의해 주세요.'); return; }
-    DB.inquiries.unshift(q);
-    save();
-
-    const ok = $('#applySuccess');
-    ok.classList.remove('hidden');
-    ok.innerHTML = `✅ <strong>접수가 완료되었습니다!</strong><br />
-      도장운영 시스템 [체험·상담 문의]에 저장되었습니다.<br />
-      확인 후 <strong>${esc(q.name)}</strong>님 연락처(<strong>${esc(q.phone)}</strong>)로 연락드리겠습니다.${q.part ? ' 희망 부: <strong>' + esc(q.part) + '</strong>' : ''}`;
-    ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    toast('무료체험 신청이 접수되었습니다 ✓');
-    form.reset();
-  });
 }
 
 /* ---------------- 갤러리 ---------------- */
@@ -1177,9 +1145,6 @@ function bindOnce() {
     if (v === DB.pin) { sessionStorage.setItem('kukje_admin_ok', '1'); enterAdmin(); }
     else { $('#pinError').classList.remove('hidden'); $('#pinInput').value = ''; $('#pinInput').focus(); }
   });
-
-  // apply form
-  bindApplyForm();
 
   // keyboard
   document.addEventListener('keydown', (e) => {

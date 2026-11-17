@@ -481,3 +481,33 @@ input,select,textarea{font-family:inherit;font-size:1rem}
   .btn-lg{padding:13px 20px;font-size:.95rem}
   .qr-card{flex-direction:row}
 }
+
+/* ---------- 무료체험 CTA 타일 (공개 홈페이지) ---------- */
+.apply-cta{display:grid;gap:18px;align-content:start}
+.apply-cta-lead{font-size:.95rem;color:#c3cfe2;line-height:1.6}
+.apply-cta-lead strong{color:var(--gold-soft)}
+.cta-tiles{display:grid;gap:12px}
+.cta-tile{display:flex;align-items:center;gap:16px;background:#fff;color:var(--ink);border:1.5px solid transparent;border-radius:16px;padding:18px 20px;box-shadow:var(--shadow-sm);transition:.2s}
+.cta-tile:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.cta-ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-weight:900;font-size:1.05rem;flex-shrink:0;background:var(--bg-soft);color:var(--navy-800)}
+.cta-ico-kakao{background:#fee500;color:#191919}
+.cta-ico-naver{background:#03c75a;color:#fff}
+.cta-ico-tel{background:var(--navy-800);color:var(--gold-soft)}
+.cta-text{min-width:0}
+.cta-text strong{display:block;font-size:1.03rem;letter-spacing:-.02em;color:var(--navy-800);line-height:1.35}
+.cta-text small{display:block;font-size:.83rem;color:var(--muted);margin-top:3px}
+.cta-arrow{margin-left:auto;color:var(--gold-deep);font-weight:900;flex-shrink:0}
+.cta-tile-primary{background:linear-gradient(135deg,var(--gold-soft),var(--gold));box-shadow:0 8px 22px rgba(200,162,74,.32)}
+.cta-tile-primary .cta-text strong{color:var(--navy-900)}
+.cta-tile-primary .cta-text small{color:#5b4a1d}
+.cta-tile-primary .cta-ico{background:rgba(255,255,255,.6);color:var(--navy-900)}
+.cta-tile-primary .cta-arrow{color:var(--navy-900)}
+.apply-points{list-style:none;padding:0;margin:0;display:grid;gap:7px}
+.apply-points li{position:relative;padding-left:16px;font-size:.86rem;color:#b9c6da;line-height:1.5}
+.apply-points li::before{content:"·";position:absolute;left:4px;color:var(--gold-soft);font-weight:900}
+.notice-tag.무료체험{background:#fdf7e3;color:var(--gold-deep)}
+@media (max-width:520px){
+  .cta-tile{padding:16px;gap:13px}
+  .cta-ico{width:42px;height:42px}
+  .cta-text strong{font-size:.98rem}
+}
