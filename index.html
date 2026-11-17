@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>천안 두정동 국제태권도장 | 유아·초등·시범단 태권도, 0원 무료체험</title>
+<meta name="description" content="천안 두정동 국제태권도장. 국기원 공인 5단·국제사범이 지도하는 유아부·초등부·중고등·성인부·시범단(카도스)·줄넘기·호신술 수업. 등하원 셔틀 운영, 0원 무료체험 신청." />
+<meta name="theme-color" content="#0d1c38" />
+<meta property="og:title" content="천안 두정동 국제태권도장" />
+<meta property="og:description" content="아이의 하루를 단단하게 만드는 곳. 국기원 공인 5단·국제사범의 체계적인 지도, 0원 무료체험 신청." />
+<meta property="og:image" content="assets/hero.jpg" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- ============================ 공개 홈페이지 ============================ -->
+<div id="publicApp" class="public-app">
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="국제태권도장 홈">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 30c6-3 12-3 16 0s10 3 16 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M14 20l10-7 10 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="24" cy="24" r="3.2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>국제태권도장</strong>
+          <small>천안 두정동 · KUKJE TAEKWONDO</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="주요 메뉴">
+        <a href="#about">도장소개</a>
+        <a href="#programs">프로그램·시간표</a>
+        <a href="#gallery">360° VR·갤러리</a>
+        <a href="#notices">공지사항</a>
+        <a href="#apply">무료체험 신청</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-tel" href="tel:041-563-4068"><span class="tel-label">전화상담</span> <strong data-academy-phone>041-563-4068</strong></a>
+        <button type="button" class="btn btn-admin btn-sm" data-action="open-admin">
+          <span aria-hidden="true">🔐</span> 도장운영 관리자
+        </button>
+        <button type="button" class="nav-toggle" data-action="toggle-nav" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="hero-eyebrow"><span class="dot"></span> 천안 두정동 · 천안오성초 인근 · 등하원 셔틀 운영</p>
+          <h1>아이의 하루를<br /><em>단단하게</em> 만드는 곳</h1>
+          <p class="hero-lead">
+            국기원 공인 5단 관장과 국제사범이 함께하는 체계적인 지도.<br class="pc-only" />
+            유아부부터 시범단(카도스)까지, 아이의 눈높이에 맞춘 수업으로 몸과 마음을 함께 키웁니다.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-gold btn-lg" href="#apply">🎁 0원 무료체험 신청</a>
+            <a class="btn btn-outline-light btn-lg" href="https://cheonan-international-taekwondo-vr-tour.parkfamily.chatgpt.site" target="_blank" rel="noopener">360° VR 둘러보기</a>
+          </div>
+          <div class="hero-sub-actions">
+            <a href="http://pf.kakao.com/_IxifmG/chat" target="_blank" rel="noopener" class="chip-link">💬 카톡 1:1 상담</a>
+            <a href="https://talk.naver.com/ct/w4thyi" target="_blank" rel="noopener" class="chip-link">🟢 네이버 톡톡 상담</a>
+            <a href="tel:041-563-4068" class="chip-link">☎ 041-563-4068</a>
+          </div>
+          <ul class="hero-badges">
+            <li>국기원 공인 5단</li>
+            <li>국제사범</li>
+            <li>호신술 지도자</li>
+            <li>품새 심판</li>
+            <li>줄넘기 지도사</li>
+          </ul>
+        </div>
+        <div class="hero-stats" aria-label="도장 운영 안내">
+          <div class="hero-stat"><strong>5</strong><span>부별 맞춤 클래스</span></div>
+          <div class="hero-stat"><strong>월~토</strong><span>13:00 ~ 21:00</span></div>
+          <div class="hero-stat"><strong>0원</strong><span>1회 무료체험</span></div>
+          <div class="hero-stat"><strong>셔틀</strong><span>등하원 운행</span></div>
+        </div>
+      </div>
+      <a class="hero-scroll" href="#about" aria-label="아래로"><span></span></a>
+    </section>
+
+    <!-- 도장소개 -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">ABOUT US</p>
+          <h2>열정으로 가르치고, <em>체계적으로</em> 키웁니다</h2>
+          <p class="section-desc">작은 인사 하나, 바른 자세 하나부터. 아이가 스스로 서는 힘을 기르는 수업을 합니다.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-photo">
+            <img src="assets/about-class.jpg" alt="국제태권도장 수업 현장" loading="lazy" />
+            <div class="about-photo-badge"><strong>천안 두정동</strong><span>경희빌딩 4층</span></div>
+          </div>
+          <div class="about-copy">
+            <h3>아이마다 다른 속도, <br />같은 방향으로 가는 수업</h3>
+            <p>
+              국제태권도장은 유아부부터 중고등·성인부, 선수·시범단까지 아이의 나이와 수준에 맞춰
+              수업을 나눕니다. 기본 동작이 몸에 익을 때까지 지도자가 함께 발을 맞추고,
+              작은 성취를 놓치지 않고 칭찬하며 다음 단계로 이끕니다.
+            </p>
+            <p>
+              국기원 공인 5단·국제사범·호신술 지도자·품새 심판·줄넘기 지도사 자격을 갖춘 지도진이
+              품새, 겨루기, 격파, 줄넘기, 호신술을 체계적으로 지도합니다.
+              등하원 셔틀을 운영해 바쁜 학부모님의 시간도 함께 챙깁니다.
+            </p>
+            <div class="about-sign">
+              <div class="sign-line"></div>
+              <div>
+                <strong>국제태권도장 관장 박주영</strong>
+                <span>국기원 공인 5단 · 국제사범 · 품새 심판</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-ico">🥋</div>
+            <h3>부별 체계적 커리큘럼</h3>
+            <p>유아·초등·중고등·성인·시범단까지 단계별 목표가 분명한 수업. 매달 성장을 확인합니다.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-ico">🛡️</div>
+            <h3>안전한 수련 환경</h3>
+            <p>충격 흡수 매트와 안전 장비, 수업 전 준비운동. 아이가 다치지 않게 먼저 살핍니다.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-ico">🚐</div>
+            <h3>등하원 셔틀 운영</h3>
+            <p>하교 시간에 맞춘 셔틀로 학원과 집을 오갑니다. 탑승 여부는 상담 시 안내드립니다.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-ico">🌏</div>
+            <h3>국제문화교류·시범단</h3>
+            <p>시범단 카도스 활동과 국제문화교류로 아이가 더 넓은 무대를 경험합니다.</p>
+          </article>
+        </div>
+
+        <div class="cert-strip">
+          <span class="cert-strip-title">지도진 자격</span>
+          <ul>
+            <li>국기원 공인 5단</li>
+            <li>국제사범</li>
+            <li>호신술 지도자</li>
+            <li>품새 심판</li>
+            <li>줄넘기 지도사</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 프로그램 & 시간표 -->
+    <section class="section section-alt" id="programs">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">PROGRAM &amp; SCHEDULE</p>
+          <h2>아이에게 맞는 <em>수업</em>을 고르세요</h2>
+          <p class="section-desc">부별 수업 시간과 운영 요일입니다. 학기·인원에 따라 조정될 수 있어요.</p>
+        </div>
+
+        <div class="program-grid">
+          <article class="program-card">
+            <div class="program-top"><span class="program-tag">유아부</span><span class="program-age">5~7세</span></div>
+            <h3>놀이처럼 시작하는 첫 태권도</h3>
+            <p>줄맞추기, 인사, 기본 발차기를 놀이와 함께 익힙니다. 집중 시간이 짧은 아이도 즐겁게 참여합니다.</p>
+            <ul><li>기본 예절·인사</li><li>줄넘기 기초</li><li>균형·민첩성 놀이</li></ul>
+          </article>
+          <article class="program-card">
+            <div class="program-top"><span class="program-tag">초등부</span><span class="program-age">1~6학년</span></div>
+            <h3>품새와 겨루기, 몸으로 배우는 자신감</h3>
+            <p>품새·겨루기·격파를 단계별로 배우고 승급 심사로 성장을 확인합니다.</p>
+            <ul><li>품새 1~8장</li><li>겨루기 기본기</li><li>격파·호신술</li></ul>
+          </article>
+          <article class="program-card">
+            <div class="program-top"><span class="program-tag">중고등·성인부</span><span class="program-age">중1 ~ 성인</span></div>
+            <h3>체력과 스트레스, 함께 잡는 수업</h3>
+            <p>학업·업무로 굳은 몸을 풀고, 겨루기와 호신술로 실전 감각을 익힙니다.</p>
+            <ul><li>체력·체형 관리</li><li>호신술</li><li>겨루기 스파링</li></ul>
+          </article>
+          <article class="program-card program-card-dark">
+            <div class="program-top"><span class="program-tag">선수·시범단</span><span class="program-age">카도스</span></div>
+            <h3>무대에 서는 아이들의 팀</h3>
+            <p>시범·격파·품새 대회를 준비하는 선수반. 발차기 정확도와 표현력을 집중 지도합니다.</p>
+            <ul><li>시범 안무</li><li>대회 준비</li><li>국제문화교류</li></ul>
+          </article>
+          <article class="program-card">
+            <div class="program-top"><span class="program-tag">특화반</span><span class="program-age">줄넘기·호신술</span></div>
+            <h3>줄넘기 지도사·호신술 지도자의 전문 수업</h3>
+            <p>학교 체육 평가에 도움이 되는 줄넘기와, 몸으로 익히는 호신술을 따로 지도합니다.</p>
+            <ul><li>줄넘기 급수</li><li>호신술 기본</li><li>체력 보강</li></ul>
+          </article>
+          <article class="program-card program-card-cta">
+            <h3>어떤 반이 맞을지 모르겠다면</h3>
+            <p>아이 나이와 성향을 듣고 가장 잘 맞는 시간을 안내해 드립니다. 체험은 0원입니다.</p>
+            <a class="btn btn-navy" href="#apply">무료체험 신청하기 →</a>
+            <a class="link-inline" href="tel:041-563-4068">☎ 041-563-4068</a>
+          </article>
+        </div>
+
+        <div class="schedule-block">
+          <div class="schedule-head">
+            <div>
+              <h3>수업 시간표</h3>
+              <p>관리자에서 시간표를 바꾸면 이 표에 바로 반영됩니다.</p>
+            </div>
+            <span class="schedule-note">운영시간 <strong data-academy-hours>월~토 13:00 ~ 21:00</strong></span>
+          </div>
+          <div class="table-scroll">
+            <table class="schedule-table">
+              <thead>
+                <tr><th>부</th><th>요일</th><th>시간</th><th>수업 내용</th><th>지도</th></tr>
+              </thead>
+              <tbody id="publicSchedule"></tbody>
+            </table>
+          </div>
+          <div class="fee-banner">
+            <div>
+              <span class="fee-label">수련비 안내</span>
+              <strong class="fee-value" data-academy-fee>월 150,000원</strong>
+              <span class="fee-sub">교재·심사비 별도 · 셔틀 이용 시 상담</span>
+            </div>
+            <div class="fee-cta">
+              <a class="btn btn-gold" href="#apply">0원 무료체험 신청</a>
+              <a class="btn btn-ghost-dark" href="https://map.naver.com/p/entry/place/1199387427" target="_blank" rel="noopener">네이버 0원 예약</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VR & 갤러리 -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">360° VR &amp; GALLERY</p>
+          <h2>오기 전에 <em>먼저 둘러보세요</em></h2>
+          <p class="section-desc">도장 안을 360도로 미리 보고, 수업 사진으로 분위기를 확인할 수 있어요.</p>
+        </div>
+
+        <div class="vr-banner">
+          <div class="vr-copy">
+            <span class="vr-badge">360° VR TOUR</span>
+            <h3>우리 아이가 수련할 공간,<br />지금 걸어서 둘러보세요</h3>
+            <p>매트 상태, 연습봉, 정수기 위치까지 미리 확인하고 오시면 상담이 더 빨라집니다.</p>
+            <a class="btn btn-gold" href="https://cheonan-international-taekwondo-vr-tour.parkfamily.chatgpt.site" target="_blank" rel="noopener">VR 투어 시작하기 →</a>
+          </div>
+          <div class="vr-visual" aria-hidden="true">
+            <div class="vr-circle">360°</div>
+            <div class="vr-ring"></div>
+          </div>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <button type="button" class="gal-item gal-wide" data-gallery="0"><img src="assets/g05.jpg" alt="수련 후 단체 사진" loading="lazy" /><span class="gal-cap">수련 후 단체 사진</span></button>
+          <button type="button" class="gal-item" data-gallery="1"><img src="assets/g01.jpg" alt="활짝 웃는 초등부 수련생" loading="lazy" /><span class="gal-cap">활짝 웃는 초등부</span></button>
+          <button type="button" class="gal-item" data-gallery="2"><img src="assets/g03.jpg" alt="흰띠 유아부 친구" loading="lazy" /><span class="gal-cap">유아부 첫 수업</span></button>
+          <button type="button" class="gal-item" data-gallery="3"><img src="assets/g07.jpg" alt="초등부 품새 수업" loading="lazy" /><span class="gal-cap">품새 수업</span></button>
+          <button type="button" class="gal-item" data-gallery="4"><img src="assets/g02.jpg" alt="수업 시작 전 인사" loading="lazy" /><span class="gal-cap">수업 전 인사</span></button>
+          <button type="button" class="gal-item gal-wide" data-gallery="5"><img src="assets/g09.jpg" alt="몸풀기 체조 시간" loading="lazy" /><span class="gal-cap">몸풀기 체조</span></button>
+          <button type="button" class="gal-item" data-gallery="6"><img src="assets/g04.jpg" alt="노랑띠 유아부 친구" loading="lazy" /><span class="gal-cap">노랑띠 친구</span></button>
+          <button type="button" class="gal-item" data-gallery="7"><img src="assets/g06.jpg" alt="유아부 수업 현장" loading="lazy" /><span class="gal-cap">유아부 수업</span></button>
+          <button type="button" class="gal-item" data-gallery="8"><img src="assets/g08.jpg" alt="품띠 선배 수련생" loading="lazy" /><span class="gal-cap">품띠 선배</span></button>
+          <button type="button" class="gal-item" data-gallery="9"><img src="assets/g11.jpg" alt="뜀틀 넘기 도전" loading="lazy" /><span class="gal-cap">뜀틀 도전</span></button>
+          <button type="button" class="gal-item" data-gallery="10"><img src="assets/g13.jpg" alt="격파 수업 현장" loading="lazy" /><span class="gal-cap">격파 수업</span></button>
+          <button type="button" class="gal-item" data-gallery="11"><img src="assets/g12.jpg" alt="발차기 자세 교정" loading="lazy" /><span class="gal-cap">자세 교정</span></button>
+        </div>
+
+        <div class="media-links">
+          <a class="media-link media-youtube" href="https://www.youtube.com/@kukje234" target="_blank" rel="noopener">
+            <span class="media-ico">▶</span>
+            <span class="media-text"><strong>유튜브 @kukje234</strong><small>수업 현장·시범·쇼츠 영상 보러가기</small></span>
+            <span class="media-arrow">→</span>
+          </a>
+          <a class="media-link" href="https://blog.naver.com/kukjae234" target="_blank" rel="noopener">
+            <span class="media-ico media-ico-green">N</span>
+            <span class="media-text"><strong>네이버 블로그</strong><small>도장 소식과 수업 이야기</small></span>
+            <span class="media-arrow">→</span>
+          </a>
+          <a class="media-link" href="http://pf.kakao.com/_IxifmG/friend" target="_blank" rel="noopener">
+            <span class="media-ico media-ico-yellow">K</span>
+            <span class="media-text"><strong>카카오톡 채널 친구추가</strong><small>이벤트·휴무 소식을 가장 먼저</small></span>
+            <span class="media-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 공지사항 -->
+    <section class="section section-alt" id="notices">
+      <div class="container notices-wrap">
+        <div class="section-head section-head-left">
+          <p class="eyebrow">NOTICE</p>
+          <h2>도장 <em>공지사항</em></h2>
+          <p class="section-desc">심사·휴무·행사 안내를 확인하세요. 관리자에서 등록하면 바로 올라갑니다.</p>
+        </div>
+        <div class="notice-list" id="noticeList"></div>
+        <div class="notice-more">
+          <button type="button" class="btn btn-ghost-dark" data-action="toggle-more-notices" id="moreNoticesBtn">공지 더보기</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 무료체험 신청 -->
+    <section class="section apply-section" id="apply">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">FREE TRIAL</p>
+          <h2><em>0원</em>으로 체험하고 결정하세요</h2>
+          <p class="section-desc">아래 신청서를 남겨주시면 도장에서 확인 후 연락드립니다. 체험은 1회 무료입니다.</p>
+        </div>
+
+        <div class="apply-grid">
+          <form class="apply-form" id="applyForm" novalidate>
+            <div class="form-row">
+              <label class="field">
+                <span class="field-label">보호자명 <b>*</b></span>
+                <input type="text" name="name" placeholder="예) 홍길동" required maxlength="20" autocomplete="name" />
+              </label>
+              <label class="field">
+                <span class="field-label">연락처 <b>*</b></span>
+                <input type="tel" name="phone" placeholder="010-0000-0000" required maxlength="20" autocomplete="tel" inputmode="tel" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="field">
+                <span class="field-label">자녀 이름</span>
+                <input type="text" name="childName" placeholder="예) 홍민준" maxlength="20" />
+              </label>
+              <label class="field">
+                <span class="field-label">자녀 나이 / 학년</span>
+                <input type="text" name="childAge" placeholder="예) 8세 / 초1" maxlength="20" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="field">
+                <span class="field-label">희망 부</span>
+                <select name="part" id="applyPart">
+                  <option value="">선택해 주세요</option>
+                  <option>유아부</option>
+                  <option>초등부</option>
+                  <option>중고등·성인부</option>
+                  <option>선수·시범단(카도스)</option>
+                  <option>줄넘기·호신술 특화반</option>
+                  <option>상담 후 결정</option>
+                </select>
+              </label>
+              <label class="field">
+                <span class="field-label">희망 시간</span>
+                <select name="time" id="applyTime">
+                  <option value="">선택해 주세요</option>
+                </select>
+              </label>
+            </div>
+            <label class="field">
+              <span class="field-label">메모 (문의 내용)</span>
+              <textarea name="memo" rows="3" maxlength="300" placeholder="예) 아이가 수줍음이 많아 소규모 수업을 원합니다. 셔틀 가능 시간도 알고 싶어요."></textarea>
+            </label>
+            <label class="check-field">
+              <input type="checkbox" name="agree" required />
+              <span>체험·상담 연락을 위한 개인정보(보호자명·연락처) 수집에 동의합니다.</span>
+            </label>
+            <button type="submit" class="btn btn-gold btn-lg btn-block">무료체험 신청서 보내기</button>
+            <p class="form-foot">신청서는 도장운영 시스템 [체험·상담 문의]로 바로 접수됩니다.</p>
+            <div class="form-success hidden" id="applySuccess" role="status"></div>
+          </form>
+
+          <aside class="apply-side">
+            <div class="side-card side-card-dark">
+              <h3>바로 예약하고 싶다면</h3>
+              <p>네이버에서 0원 무료체험을 바로 예약하실 수 있어요.</p>
+              <a class="btn btn-gold btn-block" href="https://map.naver.com/p/entry/place/1199387427" target="_blank" rel="noopener">네이버 0원 예약하기</a>
+              <a class="btn btn-outline-light btn-block" href="https://talk.naver.com/ct/w4thyi" target="_blank" rel="noopener">네이버 톡톡 상담</a>
+              <a class="btn btn-kakao btn-block" href="http://pf.kakao.com/_IxifmG/chat" target="_blank" rel="noopener">카카오톡 1:1 채팅</a>
+            </div>
+            <div class="side-card qr-card">
+              <div>
+                <h3>카톡 채널 QR</h3>
+                <p>휴대폰 카메라로 스캔하면 채널이 열립니다.</p>
+                <a class="link-inline" href="http://pf.kakao.com/_IxifmG/friend" target="_blank" rel="noopener">채널 친구추가 →</a>
+              </div>
+              <img src="assets/qr-friend.png" alt="국제태권도장 카카오톡 채널 QR 코드" width="120" height="120" />
+            </div>
+            <div class="side-card">
+              <h3>전화 상담</h3>
+              <a class="side-tel" href="tel:041-563-4068"><strong data-academy-phone>041-563-4068</strong></a>
+              <span class="side-tel-sub">휴대폰 <a href="tel:010-9980-3267">010-9980-3267</a></span>
+              <span class="side-tel-sub" data-academy-hours>월~토 13:00 ~ 21:00</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 오시는 길 -->
+    <section class="section section-alt" id="location">
+      <div class="container">
+        <div class="section-head section-head-left">
+          <p class="eyebrow">LOCATION</p>
+          <h2>오시는 길</h2>
+          <p class="section-desc">천안오성초 인근, 경희빌딩 4층입니다. 주차는 건물 주차장을 이용해 주세요.</p>
+        </div>
+        <div class="location-grid">
+          <div class="map-card">
+            <svg viewBox="0 0 600 340" role="img" aria-label="도장 약도">
+              <rect width="600" height="340" fill="#eef1f7"/>
+              <path d="M0 120 H600" stroke="#cdd6e4" stroke-width="26"/>
+              <path d="M0 120 H600" stroke="#f7f9fc" stroke-width="3" stroke-dasharray="14 12"/>
+              <path d="M150 0 V340" stroke="#cdd6e4" stroke-width="18"/>
+              <path d="M150 0 V340" stroke="#f7f9fc" stroke-width="3" stroke-dasharray="14 12"/>
+              <text x="24" y="105" font-size="15" fill="#7b8798" font-family="sans-serif">오성1길</text>
+              <text x="162" y="30" font-size="14" fill="#7b8798" font-family="sans-serif">두정역 방면</text>
+              <rect x="300" y="180" width="190" height="120" rx="10" fill="#dfe6f2" stroke="#b9c6da"/>
+              <rect x="360" y="205" width="70" height="70" rx="6" fill="#0d1c38"/>
+              <text x="395" y="243" font-size="12" fill="#e3c477" text-anchor="middle" font-family="sans-serif">4F</text>
+              <text x="395" y="290" font-size="15" fill="#2a3850" text-anchor="middle" font-family="sans-serif" font-weight="bold">경희빌딩</text>
+              <circle cx="395" cy="205" r="26" fill="#c8a24a" opacity="0.18"/>
+              <circle cx="395" cy="205" r="9" fill="#c8a24a" stroke="#fff" stroke-width="3"/>
+              <text x="440" y="200" font-size="14" fill="#0d1c38" font-family="sans-serif" font-weight="bold">국제태권도장</text>
+              <rect x="30" y="220" width="90" height="60" rx="8" fill="#e6ecf6" stroke="#c3cfe2"/>
+              <text x="75" y="255" font-size="13" fill="#63708a" text-anchor="middle" font-family="sans-serif">천안오성초</text>
+            </svg>
+            <div class="map-caption">충남 천안시 서북구 오성1길 12-13, 경희빌딩 4층</div>
+          </div>
+          <div class="location-info">
+            <div class="loc-row">
+              <span class="loc-ico">📍</span>
+              <div><strong>주소</strong><p>충남 천안시 서북구 오성1길 12-13<br />경희빌딩 4층 (두정동, 천안오성초 인근)</p></div>
+            </div>
+            <div class="loc-row">
+              <span class="loc-ico">☎</span>
+              <div><strong>전화</strong><p><a href="tel:041-563-4068" data-academy-phone>041-563-4068</a><br /><a href="tel:010-9980-3267">010-9980-3267</a></p></div>
+            </div>
+            <div class="loc-row">
+              <span class="loc-ico">🕒</span>
+              <div><strong>운영시간</strong><p data-academy-hours>월~토 13:00 ~ 21:00</p></div>
+            </div>
+            <div class="loc-row">
+              <span class="loc-ico">🚐</span>
+              <div><strong>등하원 셔틀</strong><p>두정동·성정동·백석동 일대 운행. 노선과 시간은 상담 시 안내드립니다.</p></div>
+            </div>
+            <div class="loc-buttons">
+              <a class="btn btn-navy" href="https://map.naver.com/p/entry/place/1199387427" target="_blank" rel="noopener">네이버 플레이스</a>
+              <a class="btn btn-ghost-dark" href="https://cheonan-international-taekwondo-vr-tour.parkfamily.chatgpt.site" target="_blank" rel="noopener">VR 투어</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-cta-inner">
+        <div>
+          <h2>오늘 한 번, 체험해 보세요</h2>
+          <p>수업 시간 30분 전에 오시면 도장을 둘러보고 상담받으실 수 있습니다.</p>
+        </div>
+        <div class="final-cta-actions">
+          <a class="btn btn-gold btn-lg" href="#apply">0원 무료체험 신청</a>
+          <a class="btn btn-outline-light btn-lg" href="tel:041-563-4068">☎ 041-563-4068</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand footer-logo">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 30c6-3 12-3 16 0s10 3 16 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 20l10-7 10 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="3.2" fill="currentColor"/></svg>
+          </span>
+          <span class="brand-text"><strong>국제태권도장</strong><small>천안 두정동 · KUKJE TAEKWONDO</small></span>
+        </div>
+        <p>아이의 하루를 단단하게 만드는 곳.<br />유아부부터 시범단까지, 체계적으로 지도합니다.</p>
+        <p class="footer-meta">대표자 박주영 · 충남 천안시 서북구 오성1길 12-13, 경희빌딩 4층</p>
+      </div>
+      <div class="footer-col">
+        <h4>바로가기</h4>
+        <a href="#about">도장소개</a>
+        <a href="#programs">프로그램·시간표</a>
+        <a href="#gallery">360° VR·갤러리</a>
+        <a href="#notices">공지사항</a>
+        <a href="#apply">무료체험 신청</a>
+      </div>
+      <div class="footer-col">
+        <h4>공식 채널</h4>
+        <a href="https://map.naver.com/p/entry/place/1199387427" target="_blank" rel="noopener">네이버 플레이스</a>
+        <a href="https://talk.naver.com/ct/w4thyi" target="_blank" rel="noopener">네이버 톡톡</a>
+        <a href="http://pf.kakao.com/_IxifmG/friend" target="_blank" rel="noopener">카카오톡 채널</a>
+        <a href="https://www.youtube.com/@kukje234" target="_blank" rel="noopener">유튜브 @kukje234</a>
+        <a href="https://blog.naver.com/kukjae234" target="_blank" rel="noopener">네이버 블로그</a>
+        <a href="https://cheonan-international-taekwondo-vr-tour.parkfamily.chatgpt.site" target="_blank" rel="noopener">360° VR 투어</a>
+      </div>
+      <div class="footer-col">
+        <h4>연락처</h4>
+        <a href="tel:041-563-4068"><strong data-academy-phone>041-563-4068</strong></a>
+        <a href="tel:010-9980-3267">010-9980-3267</a>
+        <p data-academy-hours>월~토 13:00 ~ 21:00</p>
+        <button type="button" class="footer-admin" data-action="open-admin">도장운영 관리자 →</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© <span id="year"></span> 국제태권도장. All rights reserved.</span>
+        <span class="footer-note">본 홈페이지의 신청서는 도장운영 시스템으로 접수됩니다.</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================ 도장운영 관리자 ============================ -->
+<div id="adminApp" class="admin-app hidden">
+  <header class="admin-header">
+    <div class="admin-header-left">
+      <button type="button" class="admin-back" data-action="exit-admin">← 홈페이지</button>
+      <div class="admin-title">
+        <strong>국제태권도장 <span>운영시스템</span></strong>
+        <small id="adminToday"></small>
+      </div>
+    </div>
+    <div class="admin-header-right">
+      <span class="save-state" id="saveState">● 브라우저에 자동 저장</span>
+      <button type="button" class="btn btn-admin-ghost btn-sm" data-action="admin-backup">JSON 백업</button>
+      <button type="button" class="btn btn-admin-ghost btn-sm" data-action="lock-admin">🔒 잠금</button>
+    </div>
+  </header>
+
+  <div class="admin-body">
+    <aside class="admin-side" id="adminSide">
+      <nav id="adminNav" aria-label="관리자 메뉴"></nav>
+      <div class="admin-side-foot">
+        <button type="button" class="side-action" data-action="admin-restore">JSON 복원</button>
+        <button type="button" class="side-action" data-action="admin-sample">샘플 초기화</button>
+        <p>데이터는 이 브라우저에만 저장됩니다.</p>
+      </div>
+    </aside>
+    <main class="admin-main" id="adminMain"></main>
+  </div>
+</div>
+
+<!-- PIN 잠금 -->
+<div class="modal-backdrop hidden" id="pinModal" role="dialog" aria-modal="true" aria-labelledby="pinTitle">
+  <div class="modal modal-sm">
+    <div class="modal-head">
+      <h3 id="pinTitle">🔐 도장운영 관리자</h3>
+      <button type="button" class="modal-x" data-action="close-modal" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc">관리자 PIN 4자리를 입력해 주세요. 처음 사용이라면 <strong>0000</strong>입니다.</p>
+      <form id="pinForm">
+        <input type="password" id="pinInput" class="pin-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="••••" autocomplete="off" aria-label="관리자 PIN" />
+        <p class="pin-error hidden" id="pinError">PIN이 맞지 않습니다. 다시 입력해 주세요.</p>
+        <button type="submit" class="btn btn-gold btn-block">들어가기</button>
+      </form>
+      <button type="button" class="btn btn-ghost-dark btn-block" data-action="demo-admin">PIN 없이 체험용으로 둘러보기</button>
+      <p class="pin-help">PIN은 관리자 → 공지·시간표·설정에서 변경할 수 있습니다.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 공용 모달 -->
+<div class="modal-backdrop hidden" id="genericModal" role="dialog" aria-modal="true">
+  <div class="modal" id="genericModalBox">
+    <div class="modal-head">
+      <h3 id="genericModalTitle"></h3>
+      <button type="button" class="modal-x" data-action="close-modal" aria-label="닫기">✕</button>
+    </div>
+    <div class="modal-body" id="genericModalBody"></div>
+  </div>
+</div>
+
+<!-- 갤러리 라이트박스 -->
+<div class="lightbox hidden" id="lightbox" role="dialog" aria-modal="true" aria-label="사진 크게 보기">
+  <button type="button" class="lb-close" data-action="close-lightbox" aria-label="닫기">✕</button>
+  <button type="button" class="lb-nav lb-prev" data-action="lb-prev" aria-label="이전 사진">‹</button>
+  <figure>
+    <img id="lbImage" src="" alt="" />
+    <figcaption id="lbCaption"></figcaption>
+  </figure>
+  <button type="button" class="lb-nav lb-next" data-action="lb-next" aria-label="다음 사진">›</button>
+</div>
+
+<input type="file" id="restoreFile" accept="application/json,.json" hidden />
+
+<script src="app.js"></script>
+</body>
+</html>
